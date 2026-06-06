@@ -9,7 +9,7 @@
     "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["octofit", "tracker", "api"],
   "author": "",
   "license": "ISC",
   "type": "module",
