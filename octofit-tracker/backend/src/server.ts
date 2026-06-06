@@ -2,6 +2,8 @@ import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRoutes from './routes/userRoutes';
+import activityRoutes from './routes/activityRoutes';
 
 dotenv.config();
 
@@ -31,6 +33,10 @@ app.get('/', (req: Request, res: Response) => {
 app.get('/health', (req: Request, res: Response) => {
   res.json({ status: 'OK' });
 });
+
+// API routes
+app.use('/api/users', userRoutes);
+app.use('/api/activities', activityRoutes);
 
 // Start server
 app.listen(PORT, () => {
